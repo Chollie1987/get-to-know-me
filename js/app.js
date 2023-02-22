@@ -117,44 +117,23 @@ questionFive();
 //   alert('So close. Try again.😖');
 // }
 
-function numberGuess(guessNumber) {
-  let guess = prompt (guessNumber);
-  let numberAttempts = 4;
-  while(numberAttempts){
-    if (guess > 7){
-      alert ('Sorry, your guess is too high');
-      numberAttempts--;
-    } else if(guess < 7){
-      alert ('So close, but not quite');
-      numberAttempts--;
-    } else if (guess === 7){
-      alert ('Yes! You did it! 🔮');
-      numberAttempts = 0;
-      break;
-    }
-  }
-  if (!numberAttempts){
-    alert('You are all out of tries.🤷🏽‍♀️ Thanks for playing!');
-  }
-}
 
-numberGuess('Can you guess my lucky number? You must do this within 4 attempts.');
 
 
 function numberGuess() {
     let numberGuess = 7;
-    //   let score = 0;
+      let score = 0;
     let numberAttempts = 4;
 
     while (numberAttempts) {
         let guess = prompt(`Can you guess my lucky number? You must do this within ${numberAttempts} attempts.`);
         numberAttempts--;
 
-        if (numberGuess > 7) {
+        if (guess > 7) {
             alert('Sorry, your guess is too high');
         } else if (guess < 7) {
             alert('So close, but not quite');
-        } else if (numberGuess === 7) {
+        } else if (guess = 7) {
             alert('Yes! You did it! 🔮');
             break;
             //     score++;
@@ -163,7 +142,7 @@ function numberGuess() {
             alert('You are all out of tries.🤷🏽‍♀️ Thanks for playing!');
         }
     }
-}
+  }
 
 // let numberGuess = 7;
 // let score = 0;
@@ -186,16 +165,43 @@ function numberGuess() {
 //     alert('You are all out of tries.🤷🏽‍♀️ Thanks for playing!');
 // }
 // }
+numberGuess();
 
+function favMovies() {
+  let attempts = 6;
+  let favMovies = ['dirty dancing', 'willy wonka and the chocolate factory', 'the nutty professor', 'pillow talk', 'black panther', 'coming to america', 'moana', 'get out', 'the little mermaid', 'enter the dragon'];
+  let guessRight = false;
 
-let favMovies = ['dirty dancing', 'willy wonka and the chocolate factory', 'the nutty professor', 'pillow talk', 'black panther', 'coming to america', 'moana', 'get out', 'the little mermaid', 'enter the dragon'];
-let choice = prompt('What is one of my favorite movie?')
-
-
-for (let i = 0; i < favMovies.length; i++) {
-console.log(favMovies[i])
-if (choice = favMovies[i]){
-    alert(`You have chosen wisely! ${choice} is one of my favorite movies!`);
-} 
+  while (attempts > 0) {
+    let choice = prompt('What is one of my favorite movie?');
+    for (let i = 0; i < favMovies.length; i++) {
+      //   let choice = favMovies(prompt);
+      console.log(favMovies[i]);
+      if (choice === favMovies[i]) {
+        alert(`You have chosen wisely! ${choice} is one of my favorite movies!`);
+        guessRight = true;
+        break;
+      }
+    }
+    if (guessRight === false) {
+      alert(`Unfortunately you've chosen incorrectly. ${choice} is not one of my faves.`);
+      attempts--;
+      //   choice = prompt('What is one of my favorite movie?');
+    } if (guessRight === true) {
+      break;
+    }
+  }
 }
-    alert(`Unfortunately you've chosen incorrectly. ${choice} is not one of my faves.`);
+favMovies();
+
+// let favMovies = ['dirty dancing', 'willy wonka and the chocolate factory', 'the nutty professor', 'pillow talk', 'black panther', 'coming to america', 'moana', 'get out', 'the little mermaid', 'enter the dragon'];
+// let choice = prompt('What is one of my favorite movie?')
+
+
+// for (let i = 0; i < favMovies.length; i++) {
+// console.log(favMovies[i])
+// if (choice = favMovies[i]){
+//     alert(`You have chosen wisely! ${choice} is one of my favorite movies!`);
+// } 
+// }
+//     alert(`Unfortunately you've chosen incorrectly. ${choice} is not one of my faves.`);
