@@ -8,4 +8,4 @@ learn a little bit about me with this quiz.
 
 ### Lighthouse Accessability Report
 
-![Lighthouse Accessability Report](/imgScreenshot(2).png)
+![LighthouseReport](/Screenshot%20(9).png)
